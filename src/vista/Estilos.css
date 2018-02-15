@@ -1,0 +1,274 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18/08/2017, 09:25:34 AM
+    Author     : sebas-789
+*/
+/************************************
+Fonts
+*************************************/
+@font-face{
+    font-family: "Comfortaa";
+    src: url('/resources/fonts/Comfortaa-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Droid Serif";
+    src:url('/resources/fonts/DroidSerif-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Exo";
+    src:url('/resources/fonts/Exo-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Kreon";
+    src:url('/resources/fonts/Kreon-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Nobile";
+    src:url('/resources/fonts/Nobile-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Amaranth";
+    src:url('/resources/fonts/Amaranth-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Istok Web";
+    src:url('/resources/fonts/IstokWeb-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Ropa Sans";
+    src:url('/resources/fonts/RopaSans-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Jura";
+    src:url('/resources/fonts/Jura-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Bitter";
+    src:url('/resources/fonts/Bitter-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Fjalla One";
+    src:url('/resources/fonts/FjallaOne-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Roboto Mono";
+    src:url('/resources/fonts/RobotoMono-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Crete Round";
+    src:url('/resources/fonts/CreteRound-Regular.ttf');
+}
+/******************************************
+Fonts por texto
+*******************************************/
+
+#menuInicio,#menuDocumentos,#menuRegistros,#menuAyuda,#menuHerramientas
+{
+    -fx-font-family:"Istok Web";
+    -fx-font-size:20;
+}
+
+#menuDocEnviados,#menuDocRecibidos,#menuInformes,#miDocEnviadosTodos,miDocEnviadosArea,#miDocEnviadosIndividuo,
+#miDocRecibidosTodos,#miDocRecibidosArea,#miDocRecibidosIndividuo,#miInformesTodos,#miInformesArea,#miInformesIndividuo,
+#miResoluciones,#miSilabos,#miConvalidaciones,#miPlanEstudios,#miUltimosDocumentos,#miRegistrarDocumento,#miRegistrosIndividuos,
+#miRegistrosArea,#miAyudaManual,#miAyudaAcercaDe,#miCrearRespaldo,#miImportarRespaldo,#miDestinatarios,#miExportarDatos,#miImportarDatos
+{
+    -fx-font-family:"Nobile";
+    -fx-font-size:16;
+}
+
+#indicador{
+    -fx-font-family:"Amaranth";
+    -fx-font-size: 20;
+}
+
+#lblBuscar
+{
+    -fx-font-family:"Exo";
+    -fx-font-size:16;
+}
+
+#lblNombre,#lblNumero,#lblFechaEmision,#lblFechaRecepcion,#lblCategoria,#rbArea,#rbIndividuo,
+#lblNombreIndividuo,#lblApPaternoIndividuo,#lblApMaternoIndividuo,#lblCargo,#lblNombreArea,
+#lblNombreResponsable,#lblApPaternoResponsable,#lblApMaternoResponsable,#lblUrlDocumento,#chkbFormatoDigital,
+#lblObservacionesDoc,#lblInformacion,#lblSalida,#cbCategoriaDocumento,#cbNombreArea,#lblReporte,
+#lblNombreDestinatario,#lblApPaterno,#lblApPaterno,#lblApMaterno,#lblEmail,#lblContrasena,#lblAnadirDestinatario,#lblUsuario
+{
+    -fx-font-family:"Comfortaa";
+    -fx-font-size: 14;
+}
+
+.text-field,.text-area{
+    -fx-font-family:"Droid Serif";
+    -fx-font-size: 14px;
+}
+
+#lblEPFinanzas,#lblUniversidad
+{
+    -fx-font-family:"Bitter";
+    -fx-font-size:20;    
+}
+
+#lblCentralTelefonica,#lblAnexo{
+    -fx-font-family:"Fjalla One";
+    -fx-font-size:16;  
+}
+
+#tpInicio,#tpDocumentos,#tpRegistros,#tpHerramientas
+{
+    -fx-font-family:"Roboto Mono";
+    -fx-font-size:16; 
+}
+
+#btnUltimosRegistros,#btnCrearDocumento,#btnEditarDocumento,#btnCategorias,#btnBusqueda,
+#btnReportes,#btnAbrirDocumento,#btnEliminarDocumento,#btnVerObservaciones,#btnAnadirObservacion,
+#btnEditarRegistro,#btnEliminarRegistro,#btnIniciarSesion,#btnDestinatarios,#btnCrearRespaldo,#btnImportarRespaldo,
+#btnExportarDatos,#btnImportarDatos
+{
+    -fx-font-family:"Roboto Mono";
+    -fx-font-size:14; 
+}
+
+#txtAyuda
+{
+    -fx-font-family:"Crete Round";
+    -fx-font-size:18; 
+}
+
+/*****************************************
+Color de fondo
+*****************************************/
+.root{
+    -fx-background-color:#ffff99;
+}
+
+/*****************************************
+Menus
+*****************************************/
+
+.menu-item{
+    -fx-background-color:#660000;
+}
+
+.menu-bar{
+    -fx-background-color:#660000;
+}
+
+.menu{
+    -fx-cursor:hand;
+}
+
+.context-menu{
+    -fx-background-color:#660000;
+}
+
+.menu-item .label{
+    -fx-text-fill:white;
+}
+
+.menu-bar .label{
+    -fx-text-fill:white;
+}
+
+.context-menu .label{
+    -fx-text-fill:white;
+}
+
+.menu-item:focused{
+    -fx-background-color:white;
+}
+
+.menu-item:focused .label{
+    -fx-text-fill:black;
+}
+
+/*****************************************
+Tablas
+*****************************************/
+.table-cell{
+    -fx-font-family:"Droid Serif";
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+}
+
+.column-header{
+    -fx-font-family:"Comfortaa";
+}
+
+#tcNumero{
+    -fx-alignment: CENTER;
+}
+
+/*****************************************
+Errores
+*****************************************/
+.text-field.error{
+    -fx-text-box-border: red ;
+    -fx-focus-color: red ;   
+    -fx-background-color: #ff3333;
+    -fx-text-fill: white;
+}
+
+
+.text-area.error{
+    -fx-text-box-border: red ;
+    -fx-focus-color: red ;   
+    -fx-background-color:#ff3333;
+}
+
+.combo-box.error{
+    -fx-border-color: red ;
+    -fx-focus-color: red ;  
+}
+
+.date-picker.error{
+    -fx-border-color: red ;
+    -fx-focus-color: red ;   
+    -fx-background-color: #ff3333;
+}
+
+/*********************************************
+Botones
+*********************************************/
+#btnGuardar, #btnCancelar, #btnAceptar, #btnReporte,#btnIniciarSesion{
+    -fx-cursor: hand;
+    -fx-font-family:"Ropa Sans";
+    -fx-font-size:20;
+    -fx-background-color:#660000;
+    -fx-text-fill:white;
+}
+
+#btnGuardar:hover, #btnCancelar:hover, #btnBuscarDocumento:hover, #btnReporte:hover, #btnIniciarSesion:hover{
+    -fx-background-color:radial-gradient(radius 180%, white, derive(white, -30%), derive(white, 30%));
+    -fx-text-fill:black;
+}
+
+#btnBuscarDocumento
+{
+    -fx-font-family:"Ropa Sans";
+    -fx-background-color:#660000;
+    -fx-text-fill:white;
+    -fx-font-size:15;
+}
+
+.button{    
+    -fx-cursor: hand;
+}
+
+

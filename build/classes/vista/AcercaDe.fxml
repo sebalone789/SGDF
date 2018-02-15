@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="300.0" prefWidth="800.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.vista.AcercaDeController">
+   <children>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="800.0">
+         <children>
+            <ImageView fx:id="ivAndina" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../img/uac.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="lblEPFinanzas" text="Escuela Profesional de Finanzas" wrapText="true" />
+                  <Label fx:id="lblUniversidad" text="Universidad Andina del Cusco" wrapText="true" />
+               </children>
+            </VBox>
+            <ImageView fx:id="ivFinanzas" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/finanzas.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label fx:id="lblCentralTelefonica" text="CENTRAL TELEFÓNICA: 084-605000 / OPERADORA: 1100" wrapText="true" />
+            <Label fx:id="lblAnexo" text="Anexo 1513" wrapText="true" />
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

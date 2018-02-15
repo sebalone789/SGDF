@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.vista.ManualUsuarioController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="400.0" spacing="10.0">
+               <children>
+                  <Accordion>
+                     <panes>
+                        <TitledPane fx:id="tpInicio" animated="false" prefWidth="300.0" text="Inicio">
+                           <content>
+                              <VBox prefWidth="298.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnUltimosRegistros" mnemonicParsing="false" onAction="#accionUltimosRegistros" prefHeight="25.0" prefWidth="432.0" text="Ultimos Documentos Registrados" wrapText="true" />
+                                    <Accordion>
+                                       <panes>
+                                          <TitledPane fx:id="tpRegistrarDocumentos" animated="false" expanded="false" prefWidth="278.0" text="Registrar Documento">
+                                             <content>
+                                                <VBox prefWidth="276.0" spacing="10.0">
+                                                   <children>
+                                                      <Button fx:id="btnCrearDocumento" mnemonicParsing="false" onAction="#accionCrearDocumento" prefHeight="25.0" prefWidth="353.0" text="Crear Nuevo Documento" wrapText="true" />
+                                                      <Button fx:id="btnEditarDocumento" mnemonicParsing="false" onAction="#accionEditarDocumento" prefHeight="25.0" prefWidth="365.0" text="Editar Documento" wrapText="true" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </content>
+                                          </TitledPane>
+                                       </panes>
+                                    </Accordion>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="tpDocumentos" animated="false" expanded="false" prefWidth="300.0" text="Documentos">
+                           <content>
+                              <VBox prefWidth="298.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnCategorias" mnemonicParsing="false" onAction="#accionCategorias" prefHeight="25.0" prefWidth="399.0" text="Categorias" wrapText="true" />
+                                    <Button fx:id="btnBusqueda" mnemonicParsing="false" onAction="#accionBusqueda" prefHeight="25.0" prefWidth="384.0" text="Busqueda" wrapText="true" />
+                                    <Button fx:id="btnReportes" mnemonicParsing="false" onAction="#accionReportes" prefHeight="25.0" prefWidth="453.0" text="Reportes" wrapText="true" />
+                                    <Button fx:id="btnAbrirDocumento" mnemonicParsing="false" onAction="#accionAbrirDocumento" prefHeight="25.0" prefWidth="360.0" text="Abrir Documento" wrapText="true" />
+                                    <Button fx:id="btnEliminarDocumento" mnemonicParsing="false" onAction="#accionEliminarDocumento" prefHeight="25.0" prefWidth="421.0" text="Eliminar Documento" wrapText="true" />
+                                    <TitledPane fx:id="tpObservaciones" animated="false" expanded="false" prefWidth="200.0" text="Observaciones">
+                                       <content>
+                                          <VBox prefWidth="100.0" spacing="10.0">
+                                             <children>
+                                                <Button fx:id="btnVerObservaciones" mnemonicParsing="false" onAction="#accionVerObservaciones" prefHeight="25.0" prefWidth="420.0" text="Ver Observaciones" wrapText="true" />
+                                                <Button fx:id="btnAnadirObservacion" mnemonicParsing="false" onAction="#accionAnadirObservacion" prefHeight="25.0" prefWidth="496.0" text="Añadir Observacion" wrapText="true" />
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="tpRegistros" animated="false" expanded="false" text="Registros">
+                           <content>
+                              <VBox prefWidth="298.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnDestinatarios" mnemonicParsing="false" onAction="#accionDestinatarios" prefHeight="25.0" prefWidth="436.0" text="Destinatarios" />
+                                    <Button fx:id="btnEditarRegistro" mnemonicParsing="false" onAction="#accionEditarRegistro" prefHeight="25.0" prefWidth="370.0" text="Editar Registro" wrapText="true" />
+                                    <Button fx:id="btnEliminarRegistro" mnemonicParsing="false" onAction="#accionEliminarRegistro" prefHeight="25.0" prefWidth="384.0" text="Eliminar Registro" wrapText="true" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="tpHerramientas" animated="false" expanded="false" text="Herramientas">
+                           <content>
+                              <VBox prefWidth="100.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnCrearRespaldo" mnemonicParsing="false" onAction="#accionCrearRespaldo" prefHeight="25.0" prefWidth="500.0" text="Crear Respaldo" />
+                                    <Button fx:id="btnImportarRespaldo" mnemonicParsing="false" onAction="#accionImportarRespaldo" prefHeight="25.0" prefWidth="454.0" text="Importar Respaldo" />
+                                    <Button fx:id="btnExportarDatos" mnemonicParsing="false" onAction="#accionExportarDatos" prefHeight="25.0" prefWidth="394.0" text="Exportar Datos" />
+                                    <Button fx:id="btnImportarDatos" mnemonicParsing="false" onAction="#accionImportarDatos" prefHeight="25.0" prefWidth="461.0" text="Importar Datos" />
+                                 </children>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                     </panes>
+                  </Accordion>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <TextArea fx:id="txtAyuda" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" HBox.hgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TextArea>
+         </children>
+      </HBox>
+   </children>
+</VBox>

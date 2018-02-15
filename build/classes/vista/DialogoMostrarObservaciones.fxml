@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@Estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.vista.DialogoMostrarObservacionesController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="960.0" spacing="500.0">
+         <children>
+            <Label fx:id="lblObservacionesDoc" alignment="TOP_LEFT" text="Observaciones Documento N° " />
+            <Button fx:id="btnAnadir" alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#accionAnadirObservacion" prefHeight="50.0" prefWidth="50.0" text="     " />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </HBox>
+      <TableView fx:id="tvObservaciones" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="tcItem" maxWidth="75.0" minWidth="75.0" prefWidth="35.0" />
+          <TableColumn fx:id="tcInformacion" minWidth="300.0" prefWidth="400.0" text="Informacion" />
+            <TableColumn fx:id="tcSalida" minWidth="300.0" prefWidth="304.0" text="Salida" />
+            <TableColumn fx:id="tcEditar" prefWidth="79.0" text="Editar" />
+            <TableColumn fx:id="tcEliminar" prefWidth="75.0" text="Eliminar" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

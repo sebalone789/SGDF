@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1360.0" stylesheets="@Estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.vista.RegistrarNuevoDocumentoController">
+   <children>
+      <GridPane hgap="30.0" vgap="10.0" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="176.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="524.0" minWidth="10.0" prefWidth="416.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="322.0" minWidth="10.0" prefWidth="146.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="532.0" minWidth="10.0" prefWidth="481.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblNombre" text="Asunto del Documento" wrapText="true" GridPane.columnIndex="2" />
+            <Label fx:id="lblUrlDocumento" prefHeight="49.0" prefWidth="170.0" text="Ubicacion del Documento" wrapText="true" GridPane.rowIndex="1" />
+            <Label fx:id="lblCategoria" text="Categoria del Documento" wrapText="true" GridPane.rowIndex="2" />
+            <Label fx:id="lblFechaEmision" text="Fecha de Emision" wrapText="true" GridPane.rowIndex="3" />
+            <Label fx:id="lblFechaRecepcion" text="Fecha de Recepcion" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="txtUbicacionDocumento" disable="true" prefHeight="25.0" prefWidth="396.0" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cbCategoriaDocumento" prefHeight="25.0" prefWidth="474.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <DatePicker fx:id="dtpFechaEmision" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dtpFechaRecepcion" disable="true" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="btnBuscarDocumento" disable="true" mnemonicParsing="false" onAction="#accionBuscarDocumento" text="Buscar" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <RadioButton fx:id="rbIndividuo" mnemonicParsing="false" text="Individuo" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <toggleGroup>
+                  <ToggleGroup fx:id="TipoPersona" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbArea" mnemonicParsing="false" text="Area" toggleGroup="$TipoPersona" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <CheckBox fx:id="chkbFormatoDigital" mnemonicParsing="false" text="Formato Digital" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="lblNumero" text="Numero del Documento" wrapText="true" />
+            <TextField fx:id="txtNroDocumento" GridPane.columnIndex="1" />
+            <TextArea fx:id="txtTituloDocumento" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="3" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </GridPane>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <GridPane HBox.hgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lblNombreArea" text="Nombre del Area" wrapText="true" />
+                  <Label fx:id="lblNombreResponsable" text="Nombre del Responsable del Area" wrapText="true" GridPane.rowIndex="1" />
+                  <Label fx:id="lblApPaternoResponsable" text="Apellido Paterno del responsable" wrapText="true" GridPane.rowIndex="2" />
+                  <Label fx:id="lblApMaternoResponsable" text="Apellido Materno del Responsable" wrapText="true" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtNombreResponsableArea" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtApPaternoResponsableArea" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtApMaternoResponsableArea" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cbNombreArea" disable="true" editable="true" prefHeight="25.0" prefWidth="333.0" GridPane.columnIndex="1" />
+               </children>
+               <padding>
+                  <Insets bottom="40.0" left="40.0" right="40.0" />
+               </padding>
+            </GridPane>
+            <GridPane HBox.hgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lblNombreIndividuo" text="Nombre del Individuo" wrapText="true" GridPane.rowIndex="2" />
+                  <Label fx:id="lblApPaternoIndividuo" text="Apellido Paterno del Individuo" wrapText="true" />
+                  <Label fx:id="lblApMaternoIndividuo" text="Apellido Materno del Individuo" wrapText="true" GridPane.rowIndex="1" />
+                  <Label fx:id="lblCargo" text="Cargo del Individuo" wrapText="true" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtApPaternoIndividuo" disable="true" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtApMaternoIndividuo" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtNombreIndividuo" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtCargoIndividuo" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+               <padding>
+                  <Insets bottom="40.0" left="40.0" right="40.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+         <children>
+            <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#accionGuardar" text="Guardar" />
+            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#accionCancelar" text="Cancelar" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

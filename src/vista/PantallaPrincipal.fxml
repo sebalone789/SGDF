@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1360.0" stylesheets="@Estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.vista.PantallaPrincipalController">
+    <children>
+        <MenuBar fx:id="menuIncio">
+            <menus>
+                <Menu fx:id="menuInicio" mnemonicParsing="false" text="Inicio">
+                    <items>
+                        <MenuItem fx:id="miUltimosDocumentos" mnemonicParsing="false" onAction="#accionUltimosDocumentos" text="Ultimos Documentos Procesados" />
+                        <MenuItem fx:id="miRegistrarDocumento" mnemonicParsing="false" onAction="#accionRegistrarDocumento" text="Registrar Documento" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuDocumentos" mnemonicParsing="false" text="Documentos">
+                    <items>
+                        <Menu fx:id="menuDocEnviados" mnemonicParsing="false" text="Documentos Enviados">
+                            <items>
+                                <MenuItem fx:id="miDocEnviadosTodos" mnemonicParsing="false" onAction="#accionDocEnviadosTodos" text="Todos" />
+                                <MenuItem fx:id="miDocEnviadosArea" mnemonicParsing="false" onAction="#accionDocEnviadosArea" text="Por Area" />
+                                <MenuItem fx:id="miDocEnviadosIndividuo" mnemonicParsing="false" onAction="#accionDocEnviadosIndividuo" text="Por Individuo" />
+                            </items>
+                        </Menu>
+                        <Menu fx:id="menuDocRecibidos" mnemonicParsing="false" text="Documentos Recibidos">
+                            <items>
+                                <MenuItem fx:id="miDocRecibidosTodos" mnemonicParsing="false" onAction="#accionDocRecibidosTodos" text="Todos" />
+                                <MenuItem fx:id="miDocRecibidosArea" mnemonicParsing="false" onAction="#accionDocRecibidosArea" text="Por Area" />
+                                <MenuItem fx:id="miDocRecibidosIndividuo" mnemonicParsing="false" onAction="#acciobDocRecibidosIndividuo" text="Por Individuo" />
+                            </items>
+                        </Menu>
+                        <Menu fx:id="menuInformes" mnemonicParsing="false" text="Informes">
+                            <items>
+                                <MenuItem fx:id="miInformesTodos" mnemonicParsing="false" onAction="#accionInformesTodos" text="Todos" />
+                                <MenuItem fx:id="miInformesArea" mnemonicParsing="false" onAction="#accionInformesArea" text="Por Area" />
+                                <MenuItem fx:id="miInformesIndividuo" mnemonicParsing="false" onAction="#accionInformesIndividuo" text="Por Individuo" />
+                            </items>
+                        </Menu>
+                        <MenuItem fx:id="miResoluciones" mnemonicParsing="false" onAction="#accionResolucionesTodos" text="Resoluciones" />
+                        <MenuItem fx:id="miSilabos" mnemonicParsing="false" onAction="#accionSilabos" text="Silabos" />
+                        <MenuItem fx:id="miConvalidaciones" mnemonicParsing="false" onAction="#accionConvalidaciones" text="Convalidaciones" />
+                        <MenuItem fx:id="miPlanEstudios" mnemonicParsing="false" onAction="#accionPlanEstudios" text="Plan de Estudios" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuRegistros" mnemonicParsing="false" text="Registros">
+                    <items>
+                        <MenuItem fx:id="miRegistrosIndividuos" mnemonicParsing="false" onAction="#accionRegistrosIndividuos" text="Individuos" />
+                        <MenuItem fx:id="miRegistrosArea" mnemonicParsing="false" onAction="#accionRegistrosArea" text="Areas" />
+                  <MenuItem fx:id="miDestinatarios" mnemonicParsing="false" onAction="#accionDestinatarios" text="Destinatarios" />
+                    </items>
+                </Menu>
+            <Menu fx:id="menuHerramientas" mnemonicParsing="false" text="Herramientas">
+              <items>
+                <MenuItem fx:id="miCrearRespaldo" mnemonicParsing="false" onAction="#accionCrearRespaldo" text="Crear Respaldo" />
+                  <MenuItem fx:id="miImportarRespaldo" mnemonicParsing="false" onAction="#accionImportarRespaldo" text="Importar Respaldo" />
+                  <MenuItem fx:id="miExportarDatos" mnemonicParsing="false" onAction="#accionExportarDatos" text="Exportar Datos" />
+                  <MenuItem fx:id="miImportarDatos" mnemonicParsing="false" onAction="#accionImportarDatos" text="Importar Datos" />
+              </items>
+            </Menu>
+                <Menu fx:id="menuAyuda" mnemonicParsing="false" text="Ayuda">
+                    <items>
+                        <MenuItem fx:id="miAyudaManual" mnemonicParsing="false" onAction="#accionAyudaManual" text="Manual de Usuario" />
+                        <MenuItem fx:id="miAyudaAcercaDe" mnemonicParsing="false" onAction="#accionAyudaAcercaDe" text="Acerca de" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <HBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="1360.0">
+            <children>
+                <Label fx:id="indicador" text="Ultimos Documentos Procesados" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+        <TableView fx:id="tvUltimosDocumentos" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="tcNumero" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="50.0" sortable="false" />
+                <TableColumn fx:id="tcItem" editable="false" maxWidth="1000.0" minWidth="120.0" prefWidth="200.0" text="Nro Documento" />
+                <TableColumn fx:id="tcCategoria" editable="false" prefWidth="242.0" text="Categoria" />
+                <TableColumn fx:id="tcTituloDocumento" editable="false" prefWidth="75.0" text="Asunto del Documento" />
+                <TableColumn fx:id="tcFechaEmision" editable="false" maxWidth="2000.0" prefWidth="75.0" text="Fecha de Emision" />
+                <TableColumn fx:id="tcFechaRecepcion" editable="false" maxWidth="2000.0" prefWidth="75.0" text="Fecha Recepcion" />
+                <TableColumn fx:id="tcEnviadoPor" editable="false" prefWidth="75.0" text="Enviado por" />
+                <TableColumn fx:id="tcVer" editable="false" maxWidth="1000.0" prefWidth="75.0" sortable="false" text="Ver" />
+            </columns>
+            <VBox.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" />
+            </VBox.margin>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </children>
+</VBox>
